@@ -1,0 +1,70 @@
+.carousel-inner img {
+    max-width: 100%;
+    /* Limita a imagem à largura do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    max-height: 750px;
+    /* Limita a altura para evitar que fique muito grande */
+    object-fit: contain;
+    /* Ajusta as imagens ao espaço disponível */
+}
+
+/* Tela principal com imagem de fundo */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('tattoo2.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    /* Desfoque na imagem */
+}
+/* Container do botão */
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão centralizado */
+.hero-button {
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Desabilitar mudança de cor ao passar o mouse */
+.hero-button:hover {
+    color: white;
+    text-decoration: none;
+    /* Remove sublinhado no hover */
+}
+
+/* Efeito de cor animada atrás do botão */
+.hero-button::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: -15px;
+    /* Início antes da primeira letra */
+    width: 0;
+    height: 100%;
+    /* Altura ajustada para cobrir a área atrás do texto */
+    background: linear-gradient(90deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    z-index: -1;
+    border-radius: 40px;
+    /* Pontas arredondadas */
+    transform: translateY(-50%);
+    transition: width 2s ease;
+}
+
+/* Animação no carregamento */
+.hero-button.loaded::before {
+    width: calc(100% + 30px);
+    /* Final estendido após a última letra */
+}
