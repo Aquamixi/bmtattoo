@@ -49,7 +49,7 @@
 .hero-button::before {
     content: "";
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: -15px;
     /* Início antes da primeira letra */
     width: 0;
@@ -67,4 +67,38 @@
 .hero-button.loaded::before {
     width: calc(100% + 30px);
     /* Final estendido após a última letra */
+}
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cinzel Decorative negrito';
+    src: url('Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bastardus sans';
+    src: url('bastardus_sans/BastardusSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titles {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: normal;
+}
+
+.titles-negrito {
+    font-family: 'Cinzel Decorative negrito', serif;
+    font-weight: normal;
+}
+
+.paragrafos {
+    font-family: 'Bastardus sans', serif;
+    font-weight: normal;
 }
