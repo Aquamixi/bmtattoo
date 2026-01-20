@@ -1,104 +1,243 @@
-.carousel-inner img {
-    max-width: 100%;
-    /* Limita a imagem à largura do container */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    max-height: 750px;
-    /* Limita a altura para evitar que fique muito grande */
-    object-fit: contain;
-    /* Ajusta as imagens ao espaço disponível */
+/* =========================
+   BM Tattoo - style.css
+   ========================= */
+
+/* Fundo geral */
+.page-bg {
+  background-color: rgb(33, 10, 41);
 }
 
-/* Tela principal com imagem de fundo */
+/* ===== HERO (corrige pulos no mobile + blur mais estável) ===== */
 .hero-section {
-    position: relative;
-    height: 100vh;
-    background: url('inicio.PNG') no-repeat center center/cover;
-    filter: blur(5px);
-    /* Desfoque na imagem */
+  position: relative;
+  min-height: 100svh; /* estável no mobile */
+  height: 100dvh;     /* acompanha UI (quando suportado) */
+  overflow: hidden;
 }
-/* Container do botão */
+
+/* Imagem de fundo com blur via pseudo-elemento */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('b2.jpeg') no-repeat center / cover;
+  filter: blur(6px);
+  transform: scale(1.05); /* evita bordas cortadas pelo blur */
+  will-change: transform;
+}
+
+/* leve escurecimento para melhorar leitura do botão */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55));
+}
+
+/* Container do botão central */
 .button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  padding: 0 16px;
 }
 
-/* Botão centralizado */
+/* Botão hero */
 .hero-button {
-    position: relative;
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1;
+  position: relative;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-/* Desabilitar mudança de cor ao passar o mouse */
+/* sem mudança de cor no hover */
 .hero-button:hover {
-    color: white;
-    text-decoration: none;
-    /* Remove sublinhado no hover */
+  color: white;
+  text-decoration: none;
 }
 
-/* Efeito de cor animada atrás do botão */
+/* Efeito animado atrás do botão */
 .hero-button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    /* Início antes da primeira letra */
-    width: 0;
-    height: 100%;
-    /* Altura ajustada para cobrir a área atrás do texto */
-    background: linear-gradient(90deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
-    z-index: -1;
-    border-radius: 40px;
-    /* Pontas arredondadas */
-    transform: translateY(-50%);
-    transition: width 2s ease;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 0;
+  height: calc(100% + 2px);
+  background: linear-gradient(90deg, rgba(255, 0, 150, 0.45), rgba(0, 204, 255, 0.45));
+  z-index: -1;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  transition: width 1.6s ease;
 }
 
-/* Animação no carregamento */
 .hero-button.loaded::before {
-    width: calc(100% + 30px);
-    /* Final estendido após a última letra */
+  width: calc(100% + 30px);
 }
-@font-face {
-    font-family: 'Cinzel Decorative';
-    src: url('Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
+/* ===== NAVBAR (sempre visível, sem hambúrguer) ===== */
+.navbar-custom {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 64px;
 }
+
+/* Links do menu */
+.navbar-links a {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* Sublinhado sutil no hover */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Ajuste mobile */
+@media (max-width: 480px) {
+  .navbar-custom {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Conteúdo geral */
+.content-wrapper {
+  background-color: rgb(33, 10, 41);
+  padding-top: 72px; /* espaço para navbar fixa */
+}
+
+/* Blocos de texto */
+.text-block {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-block .paragrafos {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  line-height: 1.8;
+}
+
+/* Lista de orçamento */
+.orcamento-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.orcamento-list li {
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===== CARROSSEL (sem pulos no mobile) ===== */
+:root { --carousel-h: 70vh; }
+@media (max-width: 768px) { :root { --carousel-h: 62vh; } }
+@media (max-width: 420px) { :root { --carousel-h: 56vh; } }
+
+.carousel-shell {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* trava altura para evitar layout shift */
+.carousel-inner,
+.carousel-item {
+  height: var(--carousel-h);
+}
+
+/* imagem ocupa 100% sem brigar com inline styles */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* melhora o swipe no mobile, reduz scroll junto */
+.carousel {
+  touch-action: pan-x;
+}
+
+/* ===== FONTES ===== */
 @font-face {
-    font-family: 'Cinzel Decorative negrito';
-    src: url('Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Cinzel Decorative';
+  src: url('Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bastardus sans';
-    src: url('bastardus_sans/BastardusSans.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Cinzel Decorative negrito';
+  src: url('Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bastardus sans';
+  src: url('bastardus_sans/BastardusSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .titles {
-    font-family: 'Cinzel Decorative', serif;
-    font-weight: normal;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: normal;
 }
 
 .titles-negrito {
-    font-family: 'Cinzel Decorative negrito', serif;
-    font-weight: normal;
+  font-family: 'Cinzel Decorative negrito', serif;
+  font-weight: normal;
 }
 
 .paragrafos {
-    font-family: 'Bastardus sans', serif;
-    font-weight: normal;
+  font-family: 'Bastardus sans', serif;
+  font-weight: normal;
+}
+
+/* Acessibilidade: reduz animações quando usuário pede */
+@media (prefers-reduced-motion: reduce) {
+  .hero-button::before { transition: none; }
+  .hero-section::before { filter: none; }
 }

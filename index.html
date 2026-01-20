@@ -5,251 +5,264 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BM Tattoo</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: rgb(33, 10, 41);">
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark py-3">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<body class="page-bg">
+    <nav class="navbar fixed-top navbar-dark py-3 navbar-custom">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <!-- Redes sociais -->
+            <div class="d-flex align-items-center gap-3">
+                <a target="_blank" class="navbar-brand text-light p-0" href="https://www.instagram.com/bmtattooist/"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+
+                <a target="_blank" class="navbar-brand text-light p-0" href="https://wa.link/ttnay0"
+                    aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp fa-lg"></i>
+                </a>
+            </div>
+
+            <!-- Título invisível para SEO -->
+            <h1 class="visually-hidden">Tattoo Cascavel</h1>
 
             <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <div class="w-100 d-flex flex-column flex-lg-row justify-content-between align-items-center">
-                    <!-- Ícones de Redes Sociais -->
-                    <div class="mb-2 mb-lg-0 d-flex align-items-center">
-                        <a target="_blank" class="navbar-brand text-light me-3"
-                            href="https://www.instagram.com/bmtattooist/">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a target="_blank" class="navbar-brand text-light"
-                            href="https://wa.link/ttnay0">
-                            <i class="fab fa-whatsapp fa-lg"></i>
-                        </a>
-                    </div>
-                    <h1 style="color: transparent; z-index: -234; position: absolute;">Tattoo Cascavel</h1>
-                    <!-- Links do Menu -->
-                    <div class="d-flex flex-column flex-lg-row align-items-center">
-                        <a class="nav-link text-light text-center mb-2 mb-lg-0 me-lg-3"
-                            href="#scrollspyHeading1">Portfólio</a>
-                        <a class="nav-link text-light text-center mb-2 mb-lg-0" href="#scrollspyHeading2">Sobre</a>
-                    </div>
-                </div>
+            <div class="d-flex align-items-center gap-4 navbar-links">
+                <a class="nav-link text-light p-0 titles" href="#scrollspyHeading1">
+                    Portfólio
+                </a>
+                <a class="nav-link text-light p-0 titles" href="#scrollspyHeading2">
+                    Sobre
+                </a>
             </div>
+
         </div>
     </nav>
 
-    <div class="hero-section"></div>
+    <!-- HERO -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
 
-    <div class="button-container">
-        <a href="#orcamentos" class="hero-button titles" id="heroButton">Orçamentos</a>
-    </div>
-    <div style="background-color: rgb(33, 10, 41);" data-bs-spy="scroll" data-bs-target="#navbar-example2"
-        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2"
-        tabindex="0">
+        <div class="button-container">
+            <a href="#orcamentos" class="hero-button titles" id="heroButton">Orçamentos</a>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="content-wrapper" data-bs-spy="scroll" data-bs-target="#navbar-example2"
+        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+
         <h4 class="text-center pt-3 text-light border-bottom border-white titles">Portfólio</h4>
 
         <div class="container-fluid my-4">
             <div class="row justify-content-center gx-3">
-                <!-- Primeiro Carrossel -->
+                <!-- Carrossel 1 -->
                 <div class="col-lg-4 col-md-6 col-sm-12 pt-3">
                     <div class="text-center">
-                        <h3>
-                            <p class="text-light titles">Dark Fantasy</p>
-                        </h3>
+                        <h3 class="text-light titles">Fantasy</h3>
                     </div>
-                    <div class="rounded p-1" style="overflow: hidden;">
-                        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-shell">
+                        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="b2.jpeg" class="d-block w-100" alt="tattoo 4"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new4.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="df4.JPG" class="d-block w-100" alt="tattoo 4"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new5.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="b1.jpeg" class="d-block w-100" alt="tattoo 4"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new6.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="df1.JPG" class="d-block w-100" alt="tattoo 1"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new7.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="df2.JPG" class="d-block w-100" alt="tattoo 2"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="b1.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="df3.JPG" class="d-block w-100" alt="tattoo 3"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="b2.jpeg" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="df1.JPG" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="df3.JPG" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="df4.JPG" class="d-block w-100" alt="Tattoo Dark Fantasy" loading="lazy"
+                                        decoding="async">
                                 </div>
                             </div>
+
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Anterior</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1"
                                 data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Próximo</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6 col-sm-12 pt-3">
-                    <div class="text-center">
-                        <h3>
-                            <p class="text-light titles">Dark Ornamental</p>
-                        </h3>
-                    </div>
-                    <div class="rounded p-1" style="overflow: hidden;">
-                        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="do1.JPG" class="d-block w-100" alt="tattoo 1"
-                                        style="height: 80vh; object-fit: cover;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="do2.JPG" class="d-block w-100" alt="tattoo 2"
-                                        style="height: 80vh; object-fit: cover;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="do3.jpg" class="d-block w-100" alt="tattoo 3"
-                                        style="height: 80vh; object-fit: cover;">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
+
+                <!-- Carrossel 2 -->
                 <div class="col-lg-4 col-md-6 col-sm-12 pt-3">
                     <div class="text-center">
-                        <h3>
-                            <p class="text-light titles">Animais</p>
-                        </h3>
+                        <h3 class="text-light titles">Animais</h3>
                     </div>
-                    <div class="rounded p-1" style="overflow: hidden;">
-                        <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-shell">
+                        <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="a4.JPG" class="d-block w-100" alt="tattoo 4"
-                                        style="height: 80vh; object-fit: cover;">
-                                </div>
-                                <div class="carousel-item ">
-                                    <img src="a1.JPG" class="d-block w-100" alt="tattoo 1"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new1.jpeg" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="a2.JPG" class="d-block w-100" alt="tattoo 2"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new2.jpeg" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="a3.JPG" class="d-block w-100" alt="tattoo 3"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new3.jpeg" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="a5.JPG" class="d-block w-100" alt="tattoo 5"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new8.jpeg" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="a6.JPG" class="d-block w-100" alt="tattoo 6"
-                                        style="height: 80vh; object-fit: cover;">
+                                    <img src="new9.jpeg" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a1.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a2.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a3.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a4.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a5.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="a6.JPG" class="d-block w-100" alt="Tattoo Animais" loading="lazy"
+                                        decoding="async">
                                 </div>
                             </div>
+
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Anterior</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3"
                                 data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Próximo</span>
                             </button>
                         </div>
                     </div>
                 </div>
+
                 <div id="scrollspyHeading1"></div>
             </div>
         </div>
 
+        <!-- SOBRE -->
         <h4 class="text-center text-light titles border-bottom border-white">Sobre Mim</h4>
         <div class="container text-light pt-2 pb-5">
-            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;" class="paragrafos pm-3">
+            <div class="text-block">
+                <p class="paragrafos">
                     Olá, eu sou a Bruna, tatuadora autoral desde os meus 19 anos e com foco principal em tatuagens com
-                    temas fantasiosos. Sou apaixonada pelo universo de Tolkien e tudo que envolve fantasia,
-                    principalmente fantasia medieval.
+                    temas
+                    fantasiosos. Sou apaixonada pelo universo de Tolkien e tudo que envolve fantasia, principalmente
+                    fantasia
+                    medieval.
                 </p>
-                <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;" class="paragrafos pm-3">
+                <p class="paragrafos">
                     Meu objetivo como artista é entregar a melhor tatuagem possível, preocupando-me com os encaixes
-                    anatômicos no corpo de cada cliente e criando o desenho mais bonito possível.
+                    anatômicos no
+                    corpo de cada cliente e criando o desenho mais bonito possível.
                 </p>
-                <p style="font-size: 1.2rem; line-height: 1.8;" class="paragrafos pm-3">
-                    Trabalho somente com tatuagens autorais; tudo é desenhado do zero, sendo assim, tudo é personalizado para cada cliente.
+                <p class="paragrafos">
+                    Trabalho somente com tatuagens autorais; tudo é desenhado do zero, sendo assim, tudo é personalizado
+                    para cada
+                    cliente.
                 </p>
             </div>
         </div>
+
         <div id="scrollspyHeading2"></div>
 
-        <h4 class="text-center text-light titles border-bottom border-white">Orçamentos</h4>
+        <!-- ORÇAMENTOS -->
+        <h4 id="orcamentos" class="text-center text-light titles border-bottom border-white">Orçamentos</h4>
         <div class="container text-light pt-2 pb-5">
-            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p class="paragrafos" style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6;">
+            <div class="text-block">
+                <p class="paragrafos">
                     Para trazer sua ideia à vida de forma única e impecável, preciso de algumas informações essenciais.
                 </p>
-                <ul style="list-style: none; padding: 0; text-align: left; font-size: 1.1rem; line-height: 1.8;"
-                    class="paragrafos">
-                    <li class="mb-3">
+
+                <ul class="orcamento-list paragrafos">
+                    <li>
                         <b class="titles-negrito">Dimensões:</b> Tamanho em centímetros;
                     </li>
-                    <li class="mb-3">
+                    <li>
                         <b class="titles-negrito">Fotos:</b> Fotos do local do corpo, sem perspectiva e bem iluminada;
                     </li>
-                    <li class="mb-3">
+                    <li>
                         <b class="titles-negrito">Inspirações:</b> Referências, prints e ideias;
-
                     </li>
-                    <li class="mb-3">
+                    <li>
                         <b class="titles-negrito">Ideia:</b> Sua ideia, descrevendo detalhadamente o que você deseja.
                     </li>
                 </ul>
+
+                <div class="text-center mt-4">
+                    <a class="btn btn-light titles px-4 py-2" target="_blank" href="https://wa.link/ttnay0">Converse
+                        comigo</a>
+                </div>
             </div>
         </div>
 
-        <h4 class="text-center">
-            <a class="btn btn-light titles"
-            target="_blank"
-            href="https://wa.link/ttnay0">Converse comigo</a>
-        </h4>
-    </div>
-    <div id="orcamentos"></div>
-    <div class="container-fluid">
         <footer class="py-3 my-4">
             <p class="text-center text-muted">© 2025 Desenvolvido por Erick Mathias Debastiani</p>
         </footer>
-    </div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+
     <script src="functions.js"></script>
 </body>
 
