@@ -6,7 +6,9 @@
 .page-bg {
   background-color: rgb(33, 10, 41);
 }
-
+.cor-escondida {
+  color: rgb(33, 10, 41);
+}
 /* ===== HERO (corrige pulos no mobile + blur mais estável) ===== */
 .hero-section {
   position: relative;
